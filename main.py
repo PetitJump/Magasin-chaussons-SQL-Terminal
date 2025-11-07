@@ -13,7 +13,6 @@ resultat = [x[0] for x in cur.fetchall()]
 for k in resultat:
     print(resultat.index(k) , k)
 
-
 print("")
 marque = int(input("Quel marque voulez vous acheter ? "))
 print("")
@@ -27,6 +26,7 @@ res = [x[0] for x in cur.fetchall()]
 print("Voici les tailles dispo :")
 print(res)
 print("")
+
 taille = int(input("Quel taille voulez vous acheter ? "))
 
 cur.execute("""
@@ -41,5 +41,6 @@ cur.execute("""
             SET stock = ?
             WHERE marque = ? AND taille = ?
         """, (res[0][0] - 1, resultat[marque], taille))
+
 print("Fini")
 db.close()
