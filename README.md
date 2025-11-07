@@ -1,0 +1,1 @@
+Application sur le terminal. Il gère une boutique de chausson avec SQL
