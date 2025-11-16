@@ -45,4 +45,6 @@ cur.execute("""
         """, (res[0][0] - 1, resultat[marque], taille))
 
 print("Le stock a été mis a jour !")
+
+db.commit()
 db.close()
